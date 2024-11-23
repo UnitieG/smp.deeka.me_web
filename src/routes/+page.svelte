@@ -7,7 +7,7 @@
 		// Fetching server status from API
 		const fetchOnlinePlayers = async () => {
 			try {
-				console.log("Fetching online players...");
+				//console.log("Fetching online players...");
 				// prod
 				const response = await fetch('https://api.deeka.me/players');
 				// dev
@@ -15,7 +15,7 @@
 				if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
 				const { online } = await response.json();
-				console.log("Fetched online players:", online);
+				//console.log("Fetched online players:", online);
 
 				// Ensure the value is updated
 				globalThis.$set
