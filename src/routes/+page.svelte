@@ -4,12 +4,42 @@
 	let maxPlayers = $state(100);
 
 	$effect(() => {
-		// Simulating fetching server status
-		setInterval(() => {
-			onlinePlayers = Math.floor(Math.random() * maxPlayers);
-		}, 5000);
+		// Fetching server status from API
+		const fetchOnlinePlayers = async () => {
+			try {
+				console.log("Fetching online players...");
+				// prod
+				const response = await fetch('https://api.deeka.me/players');
+				// dev
+				// const response = await fetch('http://localhost:2923/players');
+				if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+				const { online } = await response.json();
+				console.log("Fetched online players:", online);
+
+				// Ensure the value is updated
+				globalThis.$set
+					? globalThis.$set(onlinePlayers, Math.min(online, maxPlayers))
+					: (onlinePlayers = Math.min(online, maxPlayers));
+			} catch (error) {
+				console.error('Error fetching online players:', error);
+			}
+		};
+
+		// Fetch every 5 seconds
+		const interval = setInterval(fetchOnlinePlayers, 5000);
+
+		// Initial fetch
+		fetchOnlinePlayers();
+
+		// Clear interval on cleanup
+		return () => {
+			//console.log("Clearing interval...");
+			clearInterval(interval);
+		};
 	});
 </script>
+
 
 <div class="min-h-screen bg-gradient-to-b from-gray-900 via-purple-900 to-indigo-900 text-gray-200">
 	<main class="container mx-auto px-4 py-8">
