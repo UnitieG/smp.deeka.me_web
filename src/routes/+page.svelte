@@ -40,7 +40,6 @@
 	});
 </script>
 
-
 <div class="min-h-screen bg-gradient-to-b from-gray-900 via-purple-900 to-indigo-900 text-gray-200">
 	<main class="container mx-auto px-4 py-8">
 		<div class="mb-12 text-center">
@@ -56,7 +55,7 @@
 			<p class="mb-8 text-xl text-gray-300 drop-shadow-md">
 				A Minecraft server. Yeah a fucking minecraft server what else you want?
 			</p>
-			<div class="inline-block rounded-lg bg-gray-800/70 p-6 shadow-lg backdrop-blur-sm">
+			<div class="inline-block bg-gray-800/70 p-4 shadow-lg backdrop-blur-sm">
 				<h3 class="mb-4 text-2xl font-semibold text-pink-400">Server Address</h3>
 				<div class="flex items-center justify-center space-x-2">
 					<input
@@ -73,8 +72,8 @@
 			</div>
 		</div>
 
-		<div class="grid gap-8 md:grid-cols-2">
-			<div class="rounded-lg bg-gray-800/70 p-6 shadow-lg backdrop-blur-sm">
+		<div class="grid gap-8 break-words p-2 md:grid-cols-2">
+			<div class="bg-gray-800/70 p-6 shadow-lg backdrop-blur-sm">
 				<h3 class="mb-4 text-2xl font-semibold text-pink-400">Server Rules</h3>
 				<ul class="list-inside list-disc space-y-2 text-gray-300">
 					<li>Respect everyone</li>
@@ -83,12 +82,12 @@
 					<li>No cheating, hacking, or using unfair advantages</li>
 				</ul>
 			</div>
-			<div class="rounded-lg bg-gray-800/70 p-6 shadow-lg backdrop-blur-sm">
+			<div class="bg-gray-800/70 p-6 shadow-lg backdrop-blur-sm">
 				<h3 class="mb-4 text-2xl font-semibold text-pink-400">What We Have</h3>
 				<ul class="list-inside list-disc space-y-2 text-gray-300">
 					<li>Good admin</li>
-					<li>Custom pronous in SMP</li>
-					<li>We support LGBTQIANTANKATTACKHELICOPTERAATANKANTIAIRCRAFT</li>
+					<li>Custom pronouns in SMP</li>
+					<li>We support LGBTQIA+ and all identities</li>
 				</ul>
 			</div>
 		</div>
