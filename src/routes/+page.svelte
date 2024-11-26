@@ -40,7 +40,7 @@
 	});
 </script>
 
-<div class="min-h-screen bg-gradient-to-b from-gray-900 via-purple-900 to-indigo-900 text-gray-200">
+<div class="">
 	<main class="container mx-auto px-4 py-8">
 		<div class="mb-12 text-center">
 			<h1 class="text-6xl font-bold">
