@@ -2,47 +2,47 @@
 	let products = $state([
 		{
 			id: 1,
-			name: 'VIP Rank',
-			price: 9.99,
-			advantages: ['Access to exclusive VIP areas', 'Special chat color', 'Daily bonus rewards']
+			name: 'PRO',
+			price: 7.27,
+			advantages: ['cool']
 		},
 		{
 			id: 2,
-			name: 'MVP Rank',
-			price: 19.99,
-			advantages: ['All VIP perks', 'Exclusive pets', 'Fly mode in lobbies']
+			name: 'LEGEND',
+			price: 727,
+			advantages: ['idk']
 		},
 		{
 			id: 3,
-			name: 'Elite Rank',
-			price: 29.99,
-			advantages: ['All MVP perks', 'Custom particle effects', 'Priority in server queues']
+			name: 'Hacker',
+			price: 72.7,
+			advantages: ['i forgor']
 		}
 	]);
 </script>
 
 <div class="container mx-auto p-4">
-	<h1 class="mb-6 text-center text-2xl font-bold">Minecraft Ranks Shop</h1>
+	<h1 class="mb-6 text-center text-2xl font-bold text-white">Deeka shop</h1>
 
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 		{#each products as product}
-			<div class="flex flex-col rounded-lg border border-gray-300 shadow-lg">
-				<div class="rounded-t-lg bg-blue-50 p-4 text-center">
-					<h2 class="text-xl font-semibold text-blue-800">{product.name}</h2>
-					<p class="text-lg font-bold text-green-600">${product.price.toFixed(2)}</p>
+			<div
+				class="flex flex-col rounded-lg border border-white border-opacity-40 bg-white bg-opacity-10 shadow-lg"
+			>
+				<div class="rounded-t-lg bg-white bg-opacity-20 p-4">
+					<h2 class="text-center text-xl font-semibold text-white">{product.name}</h2>
+					<p class="text-center text-lg font-bold text-green-300">${product.price.toFixed(2)}</p>
 				</div>
-				<div class="flex-grow p-4">
-					<h3 class="mb-2 font-medium text-gray-800">Advantages:</h3>
-					<ul class="list-inside list-disc space-y-1 text-gray-600">
+				<div class="flex-grow p-4 text-white">
+					<h3 class="mb-2 font-medium">Advantages:</h3>
+					<ul class="list-inside list-disc space-y-1">
 						{#each product.advantages as advantage}
 							<li>{advantage}</li>
 						{/each}
 					</ul>
 				</div>
 				<div class="p-4">
-					<button class="w-full rounded-md bg-blue-500 p-2 text-white hover:bg-blue-600">
-						Purchase
-					</button>
+					<button class="w-full rounded-lg bg-blue-600 p-2 text-white"> Purchase </button>
 				</div>
 			</div>
 		{/each}
